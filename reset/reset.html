@@ -1,0 +1,17 @@
+<div ng-controller="resetController">
+    <h3>Wallet Currency</h3>
+	<br>
+	<br>
+    <span class="fa"
+        ng-class="{'fa-gbp': currencySelection.symbol == 'pound',
+        'fa-dollar': currencySelection.symbol == 'dollar',
+        'fa-eur': currencySelection.symbol == 'euro'
+        }">
+    </span>
+    <br>
+    <br>
+    <select class="form-control"
+        ng-model="currencySelection"
+        ng-options = "x.name for x in currency">
+    </select>
+</div>
